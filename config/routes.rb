@@ -1,5 +1,10 @@
 Abstract::Application.routes.draw do
+  resources :institutions, :submissions
   devise_for :users
+  
+  resources :users, :only => [:index, :show]
+  
+  root :to => "users#index"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

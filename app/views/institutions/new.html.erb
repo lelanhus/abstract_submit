@@ -1,0 +1,11 @@
+<% title "New Institution" %>
+
+<%= form_for(@institution) do |f| %>
+  
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  
+  <%= f.submit %>
+<% end %>

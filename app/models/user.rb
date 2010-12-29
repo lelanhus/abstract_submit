@@ -1,6 +1,9 @@
 class User < ActiveRecord::Base
   
   has_many :submissions
+  belongs_to :institution
+  
+  validates :institution_id, :presence => true
   
   # Include default devise modules. Others available are:
   # :token_authenticatable, :confirmable, :lockable and :timeoutable
