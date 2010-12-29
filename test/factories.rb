@@ -2,6 +2,7 @@
 
 Factory.define :submission do |f|
   f.sequence(:title) { |n| Faker::Lorem.sentence + "#{n}" }
+  f.body Faker::Lorem.sentences
   f.association :user
 end
 

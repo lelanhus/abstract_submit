@@ -6,9 +6,10 @@ class SubmissionTest < ActiveSupport::TestCase
     Submission.destroy_all
   end
   
-  test "a submission requires a user and title" do
+  test "a submission requires a user, title, and body" do
     assert !Factory.build(:submission, :user_id => nil).valid?
     assert !Factory.build(:submission, :title => nil).valid?
+    assert !Factory.build(:submission, :body => nil).valid?
   end
   
   test "a submission has a unique title for a given user" do
