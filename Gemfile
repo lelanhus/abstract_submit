@@ -5,7 +5,7 @@ gem 'devise'
 gem 'inherited_resources'
 gem 'rack-ssl-enforcer', :require => 'rack/ssl-enforcer'
 gem 'pdfkit'
-gem 'wkhtmltopdf-binary'
+# gem 'wkhtmltopdf-binary'  included in bin for heroku
 
 group :test do
   gem 'factory_girl_rails'
