@@ -4,6 +4,8 @@ gem 'rails', '3.0.3'
 gem 'devise'
 gem 'inherited_resources'
 gem 'rack-ssl-enforcer', :require => 'rack/ssl-enforcer'
+gem 'pdfkit'
+gem 'wkhtmltopdf-binary'
 
 group :test do
   gem 'factory_girl_rails'

@@ -22,4 +22,5 @@ class SubmissionTest < ActiveSupport::TestCase
     bad.user_id = good.user_id + 1
     assert bad.valid?
   end
+
 end
