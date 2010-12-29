@@ -1,6 +1,18 @@
 source 'http://rubygems.org'
 
 gem 'rails', '3.0.3'
+gem 'devise'
+gem 'inherited_resources'
+gem 'rack-ssl-enforcer', :require => 'rack/ssl-enforcer'
+
+group :test do
+  gem 'factory_girl_rails'
+  gem 'faker'
+end
+
+group :development do
+  gem 'nifty-generators'
+end
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
