@@ -1,0 +1,7 @@
+<% title @user.email %>
+
+<ul>
+  <% @user.submissions.each do |sub| %>
+    <li><%= link_to sub.title, sub %></li>
+  <% end %>
+</ul>

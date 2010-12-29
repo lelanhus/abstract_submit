@@ -1,2 +1,2 @@
-class InstitutionsController < InheritedResources::Base
+class InstitutionsController < AuthenticatedController
 end

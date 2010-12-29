@@ -4,7 +4,7 @@ Abstract::Application.routes.draw do
   
   resources :users, :only => [:index, :show]
   
-  root :to => "users#index"
+  root :to => "submissions#index"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

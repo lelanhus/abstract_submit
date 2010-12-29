@@ -1,0 +1,13 @@
+<% title "New Submission" %>
+
+<%= form_for(@submission) do |f| %>
+  
+  <div class="field">
+    <p>
+      <%= f.label :title %><br />
+      <%= f.text_field :title %>
+    </p>
+  </div>
+
+  <%= f.submit %>
+<% end %>

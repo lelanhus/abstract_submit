@@ -1,0 +1,9 @@
+<% title "Submissions" %>
+
+
+<ul>
+  <% @submissions.each do |sub| %>
+    <li><%= link_to sub.title, sub %></li>
+  <% end %>
+  <li><%= link_to "Create a new submission", new_submission_url(@user) %></li>
+</ul>
