@@ -6,7 +6,7 @@
 
 <%= @submission.body %>
 
-<% unless unless @submission.image.nil? %>
+<% unless @submission.image.nil? %>
   <%= image_tag @submission.image.url %>
 <% end %>
 
