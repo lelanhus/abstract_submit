@@ -26,7 +26,7 @@
     <tr>
       <td><%= link_to sub.title, sub %></td>
       <td><%= link_to sub.authors.first, sub.authors.first %></td>
-      <td><%= link_to sub.authors.first.institution, sub.authors.first.institution %></td>
+      <td><%= link_to sub.authors.first.institution.name, sub.authors.first.institution %></td>
     </tr>
   <% end %>
 </table>
