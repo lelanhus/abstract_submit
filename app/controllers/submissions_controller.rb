@@ -1,4 +1,5 @@
 class SubmissionsController < AuthenticatedController
+  belongs_to :conference, :optional => true
 
   def create
     create! { new_submission_authorship_url(@submission) }

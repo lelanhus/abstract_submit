@@ -2,6 +2,10 @@ Abstract::Application.routes.draw do
   resources :institutions, :authors
   devise_for :users
   
+  resources :conferences do
+    resources :submissions
+  end
+  
   resources :submissions do
     resources :authorships
     put 'submit', :on => :member
@@ -9,7 +13,7 @@ Abstract::Application.routes.draw do
   
   resources :users, :only => [:index, :show]
   
-  root :to => "submissions#index"
+  root :to => "conferences#index"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
