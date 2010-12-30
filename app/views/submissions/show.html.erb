@@ -2,19 +2,7 @@
 
 
 
-<div id="add_author_form">
-  <%= form_for(Authorship.new) do |f| %>
-    <div class="field">
-      <%= f.collection_select :author_id, Author.all, :id, :full_name, :prompt => "Select an author." %>
-      
-      <%= f.hidden_field :submission_id, :value => @submission.id %>
-    </div>
-    
-    <div class="actions">
-      <%= f.submit %>
-    </div>
-  <% end %>
-</div>
+
 
 <%= @submission.body %>
 
