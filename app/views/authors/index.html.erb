@@ -1,0 +1,19 @@
+<% title "Authors" %>
+
+<table>
+  <tr>
+    <th>Author</th>
+    <th>Email</th>
+    <th>Institution</th>
+  </tr>
+  
+  <% @authors.each do |author| %>
+    <tr>
+      <td><%= author.full_name %></td>
+      <td><%= author.email %></td>
+      <td><%= author.institution.name %></td>
+    </tr>
+  <% end %>
+</table>
+
+<%= link_to "Add a new author", new_author_url %>

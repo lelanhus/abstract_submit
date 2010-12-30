@@ -16,3 +16,14 @@ end
 Factory.define :institution do |f|
   f.sequence(:name) { |n| Faker::Company.name + "#{n}" }
 end
+
+Factory.define :author do |f|
+  f.sequence(:email) { |n| "joe-#{n}@example.com" }
+  f.full_name Faker::Name.name
+  f.association :institution
+end
+
+Factory.define :authorship do |f|
+  f.association :author
+  f.association :submission
+end

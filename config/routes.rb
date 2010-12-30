@@ -1,5 +1,5 @@
 Abstract::Application.routes.draw do
-  resources :institutions, :submissions
+  resources :institutions, :submissions, :authors, :authorships
   devise_for :users
   
   resources :users, :only => [:index, :show]

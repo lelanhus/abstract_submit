@@ -1,0 +1,20 @@
+<% title @author.full_name %>
+
+<h2>Contact Info</h2>
+<table>
+  <tr>
+    <th>Email:</th>
+    <td><%= @author.email %></td>
+  </tr>
+  <tr>
+    <th>Institution:</th>
+    <td><%= @author.institution.name %></td>
+  </tr>
+</table>
+
+<h2>Submissions</h2>
+<ul>
+  <% @author.submissions.each do |sub| %>
+    <li><%= link_to sub.title, sub_url %></li>
+  <% end %>
+</ul>

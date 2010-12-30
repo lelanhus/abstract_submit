@@ -27,6 +27,15 @@ a {
   margin-top: 20px;
 }
 
+nav#top_nav ul li {
+  display: inline;
+}
+
+#user_info {
+  border: 1px solid #000;
+  background: #e5e5e5;
+}
+
 #flash_notice, #flash_error, #flash_alert {
   padding: 5px 8px;
   margin: 10px 0;
@@ -82,7 +91,7 @@ a {
     padding: 0;
     border: none;
   }
-  #pdf_link {
+  #pdf_link, #user_info, #top_nav {
     display: none;
   }
 }

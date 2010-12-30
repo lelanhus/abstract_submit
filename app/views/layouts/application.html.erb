@@ -9,6 +9,29 @@
   </head>
   <body>
     <div id="container">
+      <nav id="top_nav">
+        <ul>
+          <li><%= link_to "Submissions", submissions_url %></li>
+          <li><%= link_to "Authors", authors_url %></li>
+          <li><%= link_to "Institutions", institutions_url %></li>
+        </ul>
+      </nav>
+      
+      <% if user_signed_in? %>
+      <div id="user_info">
+        <table>
+          <tr>
+            <th>Email:</th>
+            <td><%= current_user.email %></td>
+          </tr>
+          <tr>
+            <th>Institution:</th>
+            <td><%= current_user.institution %></td>
+          </tr>
+        </table>
+        <%= link_to "Logout", destroy_user_session_url %>
+      </div>
+      <% end %>
       <% flash.each do |name, msg| %>
         <%= content_tag :div, msg, :id => "flash_#{name}" %>
       <% end %>
