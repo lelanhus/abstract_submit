@@ -11,7 +11,8 @@ class Submission < ActiveRecord::Base
                       :secret_access_key => ENV['S3_SECRET']
                     },
                     :bucket => ENV['S3_BUCKET'],
-                    :path => "/submission_images/:filename"
+                    :path => "/submission_images/:filename",
+                    :styles => { :publishable => "500x500>" }
   
   validates :title, :presence => true, :uniqueness => { :scope => :user_id }  
   validates :user_id, :presence => true

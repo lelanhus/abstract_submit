@@ -8,6 +8,7 @@ gem 'pdfkit'
 # gem 'wkhtmltopdf-binary'  included in bin for heroku
 gem 'paperclip'
 gem 'aws-s3', :require => 'aws/s3'
+gem 'rmagick'
 
 group :test do
   gem 'factory_girl_rails'
