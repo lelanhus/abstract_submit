@@ -1,20 +1,60 @@
 <% title "Conferences" %>
 
+
+<p>
+  <%= link_to "Add a new conference", new_conference_url %>
+</p>
+
+<h2>With Open Submissions</h2>
 <table>
   <tr>
     <th>Name</th>
     <th>Start</th>
     <th>End</th>
+    <th>Submission Deadline</th>
   </tr>
-<% @conferences.each do |conf| %>
+<% Conference.with_open_submissions.each do |conf| %>
   <tr>
     <td><%= link_to conf.name, conf %></td>
     <td><%= conf.start_date %></td>
     <td><%= conf.end_date %></td>
+    <td><%= conf.submission_deadline %></td>
   </tr>
 <% end %>
 </table>
 
-<p>
-  <%= link_to "Add a new conference", new_conference_url %>
-</p>
+<h2>Upcoming Conferences</h2>
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Start</th>
+    <th>End</th>
+    <th>Submission Deadline</th>
+  </tr>
+<% Conference.upcoming.each do |conf| %>
+  <tr>
+    <td><%= link_to conf.name, conf %></td>
+    <td><%= conf.start_date %></td>
+    <td><%= conf.end_date %></td>
+    <td><%= conf.submission_deadline %></td>
+  </tr>
+<% end %>
+</table>
+
+<h2>Past Conferences</h2>
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Start</th>
+    <th>End</th>
+    <th>Submission Deadline</th>
+  </tr>
+<% Conference.past.each do |conf| %>
+  <tr>
+    <td><%= link_to conf.name, conf %></td>
+    <td><%= conf.start_date %></td>
+    <td><%= conf.end_date %></td>
+    <td><%= conf.submission_deadline %></td>
+  </tr>
+<% end %>
+</table>

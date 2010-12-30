@@ -1,7 +1,7 @@
 class Conference < ActiveRecord::Base
   has_many :submissions
   
-  scope :current, where("conferences.end_date > ?", Date.today)
+  scope :upcoming, where("conferences.end_date > ?", Date.today)
   scope :past, where("conferences.end_date < ?", Date.today)
   scope :with_open_submissions, where("conferences.submission_deadline > ?", Time.now)
   
