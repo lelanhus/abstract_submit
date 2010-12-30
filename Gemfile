@@ -6,8 +6,7 @@ gem 'inherited_resources'
 gem 'rack-ssl-enforcer', :require => 'rack/ssl-enforcer'
 gem 'pdfkit'
 # gem 'wkhtmltopdf-binary'  included in bin for heroku
-gem 's3_swf_upload', :git => 'git://github.com/nathancolgate/s3-swf-upload-plugin'
-gem 'aws-s3', :require => 'aws/s3'
+
 
 group :test do
   gem 'factory_girl_rails'
