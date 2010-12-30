@@ -9,6 +9,6 @@ class Conference < ActiveRecord::Base
   validates :name, :presence => true, :uniqueness => true
   
   def taking_submissions?
-    Time.now > self.submission_deadline
+    Time.now < self.submission_deadline
   end
 end

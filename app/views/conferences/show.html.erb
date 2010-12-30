@@ -14,3 +14,23 @@
     <td><%= @conference.submission_deadline %></td>
   </tr>
 </table>
+
+<table>
+  <tr>
+    <th>Submission Title</th>
+    <th>Primary Author</th>
+    <th>Institution</th>
+  </tr>
+  
+  <% @conference.submissions.each do |sub| %>
+    <tr>
+      <td><%= link_to sub.title, sub %></td>
+      <td><%= link_to sub.authors.first, sub.authors.first %></td>
+      <td><%= link_to sub.authors.first.institution, sub.authors.first.institution %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p>
+  <%= link_to "New Submission", new_conference_submission_url(@conference) if @conference.taking_submissions? %>
+</p>

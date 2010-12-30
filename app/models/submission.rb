@@ -21,8 +21,8 @@ class Submission < ActiveRecord::Base
   validates_attachment_size :image, :less_than => 4.megabytes
   validates_attachment_content_type :image, :content_type => ['image/jpeg', 'image/png']
   validates :state, :presence => true
-    
-  attr_accessible :title, :body, :image
+      
+  attr_accessible :title, :body, :image, :conference_id
   
   state_machine :initial => :awaiting_authors do
         
@@ -42,4 +42,5 @@ class Submission < ActiveRecord::Base
       transition :to => :denied, :from => [:submitted]
     end
   end
+
 end

@@ -6,6 +6,7 @@
     <p>
       <%= f.label :title %><br />
       <%= f.text_field :title %>
+      <%= f.hidden_field :conference_id, :value => params[:conference_id] %>
     </p>
   </div>
   
