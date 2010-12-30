@@ -1,0 +1,6 @@
+<ul>
+  <% @institutions.each do |insti| %>
+    <li><%= link_to insti.name, insti %></li>
+  <% end %>
+  <li><%= link_to "Add another institution.", new_institution_url %></li>
+</ul>

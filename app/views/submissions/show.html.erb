@@ -1,5 +1,10 @@
 <% title @submission.title %>
 
+<ul>
+  <% @submission.authors.each do |auth| %>
+    <li><%= link_to auth.full_name, auth %></li>
+  <% end %>
+</ul>
 
 <div id="add_author_form">
   <%= form_for(Authorship.new) do |f| %>
