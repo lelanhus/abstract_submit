@@ -19,14 +19,12 @@
   <tr>
     <th>Submission Title</th>
     <th>Primary Author</th>
-    <th>Institution</th>
   </tr>
   
   <% @conference.submissions.each do |sub| %>
     <tr>
       <td><%= link_to sub.title, sub %></td>
       <td><%= link_to sub.authors.first, sub.authors.first %></td>
-      <td><%= link_to sub.authors.first.institution.name, sub.authors.first.institution %></td>
     </tr>
   <% end %>
 </table>
