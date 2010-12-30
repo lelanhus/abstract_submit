@@ -83,6 +83,12 @@ nav#top_nav ul li {
   margin: 0;
 }
 
+#status {
+  border: 1px solid green;
+  background: yellow;
+  margin-bottom: 1em;
+}
+
 @media print {
   body { background-color: #FFF; }
   #container {
@@ -91,7 +97,7 @@ nav#top_nav ul li {
     padding: 0;
     border: none;
   }
-  #pdf_link, #user_info, #top_nav, #add_author_form {
+  #pdf_link, #user_info, #top_nav, #add_author_form, #status {
     display: none;
   }
 }

@@ -1,13 +1,21 @@
+
+
 <% title @submission.title %>
 
-
-
-
+<div id="status">
+  Status: <%= @submission.state.humanize %>
+</div>
 
 <%= @submission.body %>
 
-  <%= image_tag @submission.image.url(:publishable) %>
+<%= image_tag @submission.image.url(:publishable) unless @submission.image_file_name.nil? %>
 
 <p id="pdf_link">
   <%= link_to "PDF Version", submission_url(@submission, :format => "pdf") %>
 </p>
+
+<% if @submission.awaiting_authors? %>
+  <p>
+    <%= button_to "Submit for approval", submit_submission_url(@submission), :method => :put %>
+  </p>
+<% end %>

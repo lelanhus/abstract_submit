@@ -1,6 +1,11 @@
 Abstract::Application.routes.draw do
-  resources :institutions, :submissions, :authors, :authorships
+  resources :institutions, :authors
   devise_for :users
+  
+  resources :submissions do
+    resources :authorships
+    put 'submit', :on => :member
+  end
   
   resources :users, :only => [:index, :show]
   

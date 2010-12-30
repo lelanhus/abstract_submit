@@ -5,10 +5,12 @@ gem 'devise'
 gem 'inherited_resources'
 gem 'rack-ssl-enforcer', :require => 'rack/ssl-enforcer'
 gem 'pdfkit'
+gem 'state_machine'
 # gem 'wkhtmltopdf-binary'  included in bin for heroku
 gem 'paperclip'
 gem 'aws-s3', :require => 'aws/s3'
 gem 'rmagick'
+
 
 group :test do
   gem 'factory_girl_rails'

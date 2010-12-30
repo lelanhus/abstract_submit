@@ -1,4 +1,6 @@
 <%= form_for(@submission, :html => { :multipart => true }) do |f| %>
+
+  <%= f.error_messages %>
   
   <div class="field">
     <p>
