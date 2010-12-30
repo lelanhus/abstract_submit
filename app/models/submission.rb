@@ -13,4 +13,8 @@ class Submission < ActiveRecord::Base
   validates_attachment_content_type :image, :content_type => ['image/jpeg', 'image/png']
   
   attr_accessible :title, :body, :image
+  
+  def has_image?
+    self.image_file_name.nil?
+  end
 end
