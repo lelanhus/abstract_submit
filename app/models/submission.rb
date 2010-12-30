@@ -19,5 +19,5 @@ class Submission < ActiveRecord::Base
   validates_attachment_size :image, :less_than => 4.megabytes
   validates_attachment_content_type :image, :content_type => ['image/jpeg', 'image/png']
   
-  attr_accessible :title, :body, :image
+  attr_accessible :title, :body, :image_file_name
 end
