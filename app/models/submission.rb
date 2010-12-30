@@ -1,6 +1,7 @@
 class Submission < ActiveRecord::Base
 
   belongs_to :user
+  belongs_to :conference
   
   has_many :authorships
   has_many :authors, :through => :authorships
@@ -24,7 +25,7 @@ class Submission < ActiveRecord::Base
   attr_accessible :title, :body, :image
   
   state_machine :initial => :awaiting_authors do
-    
+        
     event :author_added do
       transition :to => :pending_submission, :from => [:awaiting_authors]
     end
