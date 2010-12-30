@@ -6,9 +6,7 @@
 
 <%= @submission.body %>
 
-<% if @submission.has_image? %>
   <%= image_tag @submission.image.url %>
-<% end %>
 
 <p id="pdf_link">
   <%= link_to "PDF Version", submission_url(@submission, :format => "pdf") %>
