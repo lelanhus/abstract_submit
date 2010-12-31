@@ -5,6 +5,12 @@
   Conference: <%= @submission.conference.name %>
 </div>
 
+<ul>
+  <% @submission.authors.each do |auth| %>
+    <li><%= link_to auth.full_name, auth %></li>
+  <% end %>
+</ul>
+
 <%= @submission.body %>
 
 <%= image_tag @submission.image.url(:publishable) unless @submission.image_file_name.nil? %>
