@@ -9,9 +9,10 @@
   <% @submission.authors.each do |auth| %>
     <li><%= link_to auth.full_name, auth %></li>
   <% end %>
+  <li class="no_pdf"><%= link_to "Add an author", new_submission_authorship_url(@submission) %></li>
 </ul>
 
-<%= @submission.body %>
+<%= @submission.body %><br />
 
 <%= image_tag @submission.image.url(:publishable) unless @submission.image_file_name.nil? %>
 
@@ -21,6 +22,6 @@
 
 <% if @submission.pending_submission? %>
   <p>
-    <%= button_to "Submit for approval", submit_submission_url(@submission), :method => :put %>
+    <%= button_to "Submit for approval", submit_submission_url(@submission), :method => :put, :class => :no_pdf %>
   </p>
 <% end %>

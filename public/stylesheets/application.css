@@ -97,7 +97,7 @@ nav#top_nav ul li {
     padding: 0;
     border: none;
   }
-  #pdf_link, #user_info, #top_nav, #add_author_form, #status {
+  #pdf_link, #user_info, #top_nav, #add_author_form, #status, .no_pdf {
     display: none;
   }
 }
