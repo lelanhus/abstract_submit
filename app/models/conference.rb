@@ -1,5 +1,6 @@
 class Conference < ActiveRecord::Base
   has_many :submissions
+  belongs_to :poc, :class_name => "User"
   
   scope :upcoming, where("conferences.end_date > ?", Date.today)
   scope :past, where("conferences.end_date < ?", Date.today)

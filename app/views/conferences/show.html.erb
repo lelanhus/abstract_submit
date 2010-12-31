@@ -13,6 +13,10 @@
     <th>Submission Deadline:</th>
     <td><%= @conference.submission_deadline %></td>
   </tr>
+  <tr>
+    <th>Point of Contact:</th>
+    <td><%= mail_to @conference.poc.email %></td>
+  </tr>
 </table>
 
 <table>

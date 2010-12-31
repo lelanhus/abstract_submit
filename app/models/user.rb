@@ -1,6 +1,7 @@
 class User < ActiveRecord::Base
   
   has_many :submissions
+  has_many :conferences, :foreign_key => "poc_id"
   belongs_to :institution
     
   # Include default devise modules. Others available are:
