@@ -24,7 +24,7 @@
   <% @conference.submissions.each do |sub| %>
     <tr>
       <td><%= link_to sub.title, sub %></td>
-      <td><%= link_to sub.authors.first, sub.authors.first %></td>
+      <td><%= link_to sub.authors.first.full_name, sub.authors.first %></td>
     </tr>
   <% end %>
 </table>
